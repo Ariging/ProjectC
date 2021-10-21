@@ -1,0 +1,978 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* noto sans 글씨체 */
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined');
+/* Material Icons Outlined*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid teal; */
+}
+:root{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+    word-break: keep-all;
+}
+body{min-width: 1280px;}
+.inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:visited{color: inherit;}
+li{
+    list-style: none;
+}
+/*header*/
+header{
+    height: 90px;
+}
+header .inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    background: url(../images/logo.png) 50% 90% no-repeat;
+    background-size: contain;
+    width: 280px;
+    height: 90px;
+    display: block;
+}
+.topR{
+    display: flex;
+    align-items: center;
+}
+.topR a{
+    margin: 0 10px 0 0;
+}
+.topR a:first-child{
+    position: relative;
+}
+.topR a:first-child::after{
+    width: 1px;
+    height: 15px;
+    background: black;
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 21px;
+}
+.topR button{
+    background: #ccc;
+    color: white;
+    border: none;
+    width: 25px;
+    height: 18px;
+    border-radius: 3px;
+    margin: 0 10px 0 5px;
+    cursor: pointer;
+}
+.topR input{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #2b2171;
+    padding: 0 0 0 35px;
+    margin: 0 5px 0 0;
+}
+.topR span{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: #2b2171;
+    border-radius: 5px;
+    font-size: 2rem;
+    padding: 5px;
+}
+/*sec01*/
+section.sec01{
+    width: 100%;
+    height: 600px;
+    background: url(../images/main.png) 50% 0% no-repeat;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    position: relative;
+    cursor: pointer;
+}
+ul.gnb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    width: 95%;
+    height: 50px;
+}
+nav .inner{
+    display: flex;
+}
+.gnb li{
+    width: 17%;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.gnb + span{
+    font-size: 2rem;
+    color: #fff;
+    width: 5%;
+    text-align: center;
+    padding: 8px 0 0 0;
+}
+.snb{
+    width: 100%;
+    display: flex;
+    background: #fff;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    height: 0px;
+    z-index: 100;
+    overflow: hidden;
+}
+.snb ul{
+    width: 15.83%;
+}
+.snb ul li{
+    text-align: center;
+    font-weight: 500;
+    padding: 5px 0;
+}
+.snb ul:nth-of-type(7){
+    width: 6%;
+}
+nav:hover > .snb{
+    height: 250px;
+    transition: height 0.7s;
+}
+nav:hover{
+    background: #fff;
+}
+nav:hover ul.gnb{
+    color: #000;
+}
+nav:hover span{
+    color: #000;
+}
+.gnb li:hover{
+    border-bottom: 2px solid #2b2171;
+}
+.gnb li.on{
+    border-bottom: 2px solid #2b2171;
+}
+.snb ul li:hover{
+    text-decoration: underline;
+}
+.sec01 > .inner{
+    position: relative;
+}
+.sitemap{
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 110;
+    text-align: center;
+}
+.sitemap li{
+    cursor: pointer;
+}
+.sm1 > span:hover{
+    text-decoration: underline;
+}
+.sm2 li > span:hover{
+    text-decoration: underline;
+}
+.sitemap > ul{
+    display: flex;
+}
+.sitemap .sm1{
+    width: 17%;
+}
+.sm1 > span{
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 11px;
+    display: block;
+    color: #2b2171;
+}
+.sm2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.sm2 li{
+    padding: 3px 0;
+}
+.sm3{
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 300;
+}
+.sm3 li{
+    padding: 0;
+}
+.sm3 li:hover{
+    text-decoration: underline;
+}
+.sec01 h1{
+    color: #fff;
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 500;
+    padding: 120px 0 0 0;
+    line-height: 60px;
+}
+.sec01 p{
+    color: #fff;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 20px 0 0 0;
+}
+.sitemap > span{
+    font-size: 2rem;
+    cursor: pointer;
+}
+/*sec02*/
+.civil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.civil h2{
+    font-size: 2rem;
+}
+.civil button{
+    width: 100px;
+    height: 40px;
+    background: #eee;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin: 0 5px 0 10px;
+    border: none;
+    cursor: pointer;
+}
+.civilbt button:nth-of-type(1).on{
+    background: #ffa10d;
+    color: #fff;
+}
+.civilbt button:nth-of-type(2).on{
+    background: #8dca25;
+    color: #fff;
+}
+.civilbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.civilbox div{
+    width: 18%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.civilbox div .circleicon{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.civilbox.one div .circleicon{
+    background-color: #ffa10d;
+}
+.civilbox.two div .circleicon{
+    background-color: #8dca25;
+}
+.civilbox.one,
+.civilbox.two{
+    display: none;
+}
+.civilbox.on{
+    display: flex;
+}
+.civilbox div p{
+    font-size: 1.2rem;
+    margin: 10px 0 30px 0;
+    width: 85%;
+}
+.circleicon span{
+    width: 60px;
+    height: 60px;
+}
+.circleicon:hover > span{
+    animation: flipInX 1s ease;
+}
+.civilbox.one div:nth-of-type(1) .circleicon span{
+    background: url(../images/insurance.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(2) .circleicon span{
+    background: url(../images/diploma.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(3) .circleicon span{
+    background: url(../images/money.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(4) .circleicon span{
+    background: url(../images/claim.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(5) .circleicon span{
+    background: url(../images/compliant.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(6) .circleicon span{
+    background: url(../images/browse.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(7) .circleicon span{
+    background: url(../images/searching.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(8) .circleicon span{
+    background: url(../images/call.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(9) .circleicon span{
+    background: url(../images/print.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(1) .circleicon:hover span{
+    background: url(../images/insurance_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(2) .circleicon:hover span{
+    background: url(../images/diploma_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(3) .circleicon:hover span{
+    background: url(../images/money_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(4) .circleicon:hover span{
+    background: url(../images/claim_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(5) .circleicon:hover span{
+    background: url(../images/compliant_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(6) .circleicon:hover span{
+    background: url(../images/browse_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(7) .circleicon:hover span{
+    background: url(../images/searching_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(8) .circleicon:hover span{
+    background: url(../images/call_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.one div:nth-of-type(9) .circleicon:hover span{
+    background: url(../images/print_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+/*-----------------------------*/
+.civilbox.two div:nth-of-type(1) .circleicon span{
+    background: url(../images/pin_number.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(2) .circleicon span{
+    background: url(../images/browse.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(3) .circleicon span{
+    background: url(../images/research.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(4) .circleicon span{
+    background: url(../images/searching.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(5) .circleicon span{
+    background: url(../images/man.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(6) .circleicon span{
+    background: url(../images/team.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(7) .circleicon span{
+    background: url(../images/certificate.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(8) .circleicon span{
+    background: url(../images/diploma.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(9) .circleicon span{
+    background: url(../images/print.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(1) .circleicon:hover span{
+    background: url(../images/pin_number_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(2) .circleicon:hover span{
+    background: url(../images/browse_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(3) .circleicon:hover span{
+    background: url(../images/research_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(4) .circleicon:hover span{
+    background: url(../images/searching_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(5) .circleicon:hover span{
+    background: url(../images/man_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(6) .circleicon:hover span{
+    background: url(../images/team_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(7) .circleicon:hover span{
+    background: url(../images/certificate_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(8) .circleicon:hover span{
+    background: url(../images/diploma_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.civilbox.two div:nth-of-type(9) .circleicon:hover span{
+    background: url(../images/print_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+
+/*sec03*/
+
+.sec03 .noticebg{
+    width: 100%;
+    height: 200px;
+    background-color: #eee;
+    border-radius: 50px;
+    position: relative;
+    margin: 50px 0;
+}
+.noticebg::after{
+    background: url(../images/ci.png) 50% 50% no-repeat;
+    background-size: 100% 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+.sec03 .notice{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.notice h3{
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+}
+.notice p{
+    font-size: 1.2rem;
+}
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after,
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+    color: #000;
+}
+
+/*sec04*/
+.sec04 .inner{
+    display: flex;
+    justify-content: space-between;
+}
+.sec04 .banner{
+    width: 24%;
+}
+.banner span{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.banner div{
+    width: 100%;
+    height: 150px;
+    margin: 10px 0 0;
+    cursor: pointer;
+}
+div.banner:nth-of-type(1) div{
+    background: url(../images/video.png) 50% 50% no-repeat;
+    background-size: cover;
+}
+div.banner:nth-of-type(2) div{
+    background: url(../images/card.png) 50% 50% no-repeat;
+    background-size: cover;
+}
+div.banner:nth-of-type(3) div{
+    background: #eee;
+    position: relative;
+}
+div.banner:nth-of-type(3) div::after{
+    background: url(../images/ceo.png) 50% 50% no-repeat;
+    top: 0;
+    right: 0;
+    width: 160px;
+    height: 150px;
+    position: absolute;
+    content: "";
+}
+div.banner:nth-of-type(3) div span{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    width: 150px;
+    padding: 40px 0 0 0;
+}
+
+div.banner:nth-of-type(4) div{
+    background: url(../images/retro.png) 50% 50% no-repeat;
+    background-size: cover;
+}
+
+/*sec05*/
+.sec05{
+    margin: 50px 0;
+}
+.sec05 .inner{
+    display: flex;
+    justify-content: space-between;
+}
+.sec05 .left{
+    width: 58%;
+    height: 430px;
+    border: 1px solid #eee;
+}
+.sec05 .right{
+    width: 40%;
+    height: 430px;
+    border: 1px solid #eee;
+}
+.left h3{
+    font-size: 1.7rem;
+    position: relative;
+    text-align: center;
+    margin: 10px 0 30px;
+}
+.sec05 h3 span{
+    font-size: 2rem;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    cursor: pointer;
+}
+.left .tabbt{
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+.tabbt li{
+    font-size: 1.5rem;
+    width: 25%;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+    cursor: pointer;
+}
+.tabbt li.on{
+    border-bottom: 3px solid #2b2171;
+}
+.news{
+    width: 90%;
+    margin: 25px auto;
+}
+.news div{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.news p:hover{
+    text-decoration: underline;
+}
+.news p{
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 30px 0 0;
+}
+.news.one,
+.news.two,
+.news.three,
+.news.four{
+    display: none;
+}
+.news.on{
+    display: block;
+}
+.right h3{
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 10px 0 30px;
+}
+.annuity{
+    display: flex;
+
+    flex-wrap: wrap;
+}
+.annuity > div{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.annuity .circleicon{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2b2171;
+}
+.annuity div p{
+    font-size: 1.2rem;
+    margin: 10px 0 25px 0;
+    width: 85%;
+    text-align: center;
+}
+
+.annuity div:nth-of-type(1) .circleicon span{
+    background: url(../images/saving_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.annuity div:nth-of-type(2) .circleicon span{
+    background: url(../images/user_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.annuity div:nth-of-type(3) .circleicon span{
+    background: url(../images/payment_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.annuity div:nth-of-type(4) .circleicon span{
+    background: url(../images/demand_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.annuity div:nth-of-type(5) .circleicon span{
+    background: url(../images/welfare_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.annuity div:nth-of-type(6) .circleicon span{
+    background: url(../images/legislation_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+
+/*sec06*/
+.sec06 .inner{
+    display: flex;
+    justify-content: space-between;
+}
+.sec06 .box{
+    width: 30%;
+    height: 370px;
+    color: #fff;
+    cursor: pointer;
+}
+.favicon{
+    width: 36%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box.one{
+    background: #ffa10d;
+}
+.box.two{
+    background: #8dca25;
+}
+.icon{
+    display: flex;
+    flex-wrap: wrap;
+}
+.icon div{
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box h3{
+    font-size: 1.7rem;
+    text-align: center;
+    margin: 10px 0 30px 0;
+}
+.box span{
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 20px 0 10px;
+}
+.box p{
+    font-size: 1.2rem;
+    margin: 0 0 30px 0;
+}
+.icon div:hover p{
+    text-decoration: underline;
+}
+.box.one .icon div:nth-of-type(1) span{
+    background: url(../images/statistics_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.box.one .icon div:nth-of-type(2) span{
+    background: url(../images/stats_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.box.one .icon div:nth-of-type(3) span{
+    background: url(../images/statistical_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.box.one .icon div:nth-of-type(4) span{
+    background: url(../images/ranking_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.box.two .icon div:nth-of-type(1) span{
+    background: url(../images/history_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.box.two .icon div:nth-of-type(2) span{
+    background: url(../images/organization_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.box.two .icon div:nth-of-type(3) span{
+    background: url(../images/business_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.box.two .icon div:nth-of-type(4) span{
+    background: url(../images/map_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.favicon div{
+    width: 49%;
+    height: 49%;
+    background: #2b2171;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+.favicon div:nth-of-type(3){
+    margin: 2% 0 0 0;
+}
+.favicon div:nth-of-type(4){
+    margin: 2% 0 0 0;
+}
+.favicon p{
+    font-size: 1.6rem;
+    width: 50%;
+    font-weight: 500;
+}
+.favicon span{
+    width: 60px;
+    height: 60px;
+}
+.favicon div:nth-of-type(1) span{
+    background: url(../images/annuities_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.favicon div:nth-of-type(2) span{
+    background: url(../images/fax_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.favicon div:nth-of-type(3) span{
+    background: url(../images/calculator_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.favicon div:nth-of-type(4) span{
+    background: url(../images/durunuri_wh.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.favicon div:hover{
+    text-decoration: underline;
+}
+
+
+
+/*footer*/
+footer{
+    margin: 50px 0;
+    border-top: 3px solid #eee;
+}
+footer .top{
+    border-bottom: 1px solid #eee;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.top .inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span.call{
+    width: 40px;
+    height: 40px;
+    background: url(../images/call2.png) 50% 50% no-repeat;
+    background-size: contain;
+    margin: 0 10px;
+}
+.top .inner p:nth-of-type(1){
+    font-size: 1.5rem;
+    margin: 0 50px 0 0;
+}
+.top .inner p:nth-of-type(2){
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin: 0 30px 0 0;
+}
+p > span{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2b2171;
+}
+.top .inner p:nth-of-type(3){
+    font-size: 1.5rem;
+    margin: 0 50px 0 0;
+}
+.top .inner div{
+    background: #eee;
+    border-radius: 5px;
+    width: 150px;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+    align-items: center;
+    cursor: pointer;
+}
+.top .inner div span:first-child{
+    width: 40px;
+    height: 40px;
+    background: url(../images/support.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+footer .middle{
+    border-bottom: 1px solid #eee;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.middle .inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.middle .link a{
+    position: relative;
+    font-size: 1.1rem;
+    margin: 0 10px 0 0;
+}
+.middle .link a::after{
+    width: 1px;
+    height: 15px;
+    position: absolute;
+    right: -8px;
+    top: 5px;
+    content: "";
+    background: #000;
+}
+.middle .link a:last-child::after{
+    display: none;
+}
+.middle .link a:nth-of-type(1){
+    color: #2b2171;
+}
+.middle .link a:nth-of-type(5){
+    color: #ff0000;
+}
+.middle .sns{
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+}
+.middle .sns a{
+    width: 40px;
+    height: 40px;
+}
+.middle .sns a:nth-of-type(1){
+    background: url(../images/facebook.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.middle .sns a:nth-of-type(2){
+    background: url(../images/instagram.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.middle .sns a:nth-of-type(3){
+    background: url(../images/youtube.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.middle .sns a:nth-of-type(4){
+    background: url(../images/naverblog.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.middle .sns a:nth-of-type(5){
+    background: url(../images/post.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.middle .sns a:nth-of-type(6){
+    background: url(../images/navertv.png) 50% 50% no-repeat;
+    background-size: contain;
+}
+.bottom .inner{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom p{
+    margin: 5px 0 0 0;
+}
+.bottom p:nth-of-type(4){
+    font-weight: 600;
+}
+.bottom button{
+    background: #ccc;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 30px;
+    border-radius: 3px;
+    margin: 0 10px 0 5px;
+    cursor: pointer;
+}
+.bottom .select{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.select select{
+    width: 150px;
+    height: 30px;
+}
+.select div{
+    margin: 5px 0;
+}
