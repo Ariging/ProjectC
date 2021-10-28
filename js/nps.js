@@ -17,6 +17,27 @@ $(document).ready(function(){
     $(".close").click(function(){
         $(".sitemap").slideUp(700);
     })
+    $(".snbsub").hide();
+    $(".snb span").click(function(){
+        $(this).next().slideToggle(300);
+        //this 다음 요소를 슬라이드다운
+        $(".snb span").not(this).next().slideUp(300);
+    });
+    if($(window).width() < 641){
+        $(".mMenu").click(function(){
+            $("nav").slideDown().addClass("on");
+            $("nav").addClass("on");
+            $(this).toggleClass("on").next().toggleClass("on");
+        });
+        $(".mClose").click(function(){
+            $("nav").slideUp().removeClass("on");
+            $(this).toggleClass("on").prev().toggleClass("on");
+        });
+        $(".mgnb").click(function(){
+            $(this).addClass('on').siblings().removeClass('on');
+            $("#"+$(this).data('id')).addClass('on').siblings().removeClass('on');
+        });
+    }
 })
 var swiper = new Swiper(".mySwiper", {
     loop: true,

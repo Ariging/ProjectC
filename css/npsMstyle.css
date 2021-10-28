@@ -1,0 +1,450 @@
+@charset "UTF-8";
+
+body{min-width: 320px;}
+.inner{width: calc(100% - 20px);}
+
+header {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 100;
+}
+header .inner{
+    width: 100%;
+}
+header .logo{
+    width: 120px;
+    height: 40px;
+}
+.topR{
+    display: none;
+}
+.mMenu.on, .mClose.on{
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    background: #2B2171;
+    padding: 5px;
+}
+/*nav*/
+nav:hover{
+    display: unset;
+}
+nav {
+    display: none;
+    position: fixed;
+    top: 40px;
+    right: 0;
+    width: 90%;
+    height: auto;
+    background: #fff;
+    box-shadow: -10px 5px 10px -5px rgb(0 0 0 / 30%);
+    z-index: 100;
+}
+nav .inner{
+    width: 100%;
+}
+nav:hover span {
+    color: inherit;
+}
+.mLogin{
+    display: block;
+    height: 35px;
+    background: #2b2171;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mLogin a{
+    margin: 0 10px;
+}
+.mLogin span{
+    font-size: 2rem;
+    padding: 0 10px;
+}
+.mSelect{
+    display: block;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background: #ffa10d;
+}
+.mSelect select{
+    margin: 0 10px;
+    width: 30%;
+    height: 70%;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.mSelect button{
+    width: 10%;
+    height: 70%;
+    border-radius: 5px;
+    border: 1px solid #fff;
+}
+.mSearch{
+    display: block;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    background: #8dca25;
+}
+.mSearch input{
+    border-radius: 5px;
+    width: 70%;
+    height: 80%;
+    border: 1px solid #fff;
+    margin: 0 10px;
+    display: inline-block;
+    padding: 0 0 0 10px;
+}
+.mSearch span{
+    color: #fff;
+    font-size: 2rem;
+}
+ul.gnb{
+    width: 50%;
+    flex-direction: column;
+    color: #000;
+    height: auto;
+    border-right: 1px solid #ccc;
+    margin: 20px 0;
+}
+.gnb + span{
+    display: none;
+}
+.gnb li {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 10px;
+}
+.gnb li.on {
+    border-bottom: none;
+    color: #2b2171;
+}
+.gnb li:hover {
+    border-bottom: none;
+}
+.snb{
+    width: 50%;
+    top: 106px;
+    left: 50%;
+    overflow: hidden;
+    height: 263px;
+    padding: 22px 0 0 0;
+}
+nav:hover > .snb {
+    height: 263px;
+    transition: unset;
+}
+.snb ul {
+    width: 100%;
+}
+.snb ul li{
+    font-weight: 400;
+}
+nav:hover > .snb {
+    display: unset;
+}
+.msnb{
+    display: none;
+}
+.msnb.on{
+    display: block;
+}
+/*sec01*/
+section.sec01{
+    height: 300px;
+    margin: 40px 0 0 0;
+}
+.sec01 h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 60px 0 0 0;
+    line-height: 40px;
+}
+.sec01 p {
+    font-size: 1.5rem;
+    margin: 10px 0 0 0;
+}
+/*sec02*/
+.civil {
+    margin: 30px 0;
+    flex-direction: column;
+}
+.civil h2 {
+    font-size: 1.5rem;
+    margin: 0 0 10px 0;
+}
+.civil button {
+    width: 90px;
+    height: 30px;
+    font-size: 1rem;
+}
+.civilbox{
+    justify-content: space-between;
+}
+.civilbox div {
+    width: 30%;
+}
+.civilbox div .circleicon{
+    width: 90px;
+    height: 90px;
+}
+.circleicon span {
+    width: 50px;
+    height: 50px;
+}
+.civilbox div p {
+    font-size: 0.7rem;
+    margin: 10px 0 15px 0;
+    width: 90%;
+}
+/*sec03*/
+.notice p{
+    width: 80%;
+    font-size: 0.7rem;
+}
+.notice h3 {
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+    width: 80%;
+}
+.notice a{
+    width: 80%;
+}
+.notice a h3, .notice a p{
+    width: 100%;
+}
+.sec03 .noticebg {
+    height: 180px;
+    border-radius: 30px;
+    margin: 30px 0;
+}
+.swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+    font-size: 1.5rem;
+}
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+    font-size: 1.5rem;
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 0px;
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 0px;
+}
+
+/*sec04*/
+.sec04 .inner {
+    flex-wrap: wrap;
+}
+.sec04 .banner {
+    width: 47%;
+}
+.banner div {
+    height: 25vw;
+    margin: 10px 0 0;
+}
+.banner span {
+    font-size: 0.9rem;
+}
+div.banner:nth-of-type(3) div span {
+    font-size: 0.7rem;
+    width: 67%;
+    padding: 15px 0 0 0;
+}
+div.banner:nth-of-type(3) div::after {
+    background: url(../images/ceo.png) 50% 50% no-repeat;
+    width: 40%;
+    height: 100%;
+    background-size: cover;
+}
+
+/*sec05*/
+.sec05 {
+    margin: 30px 0;
+}
+.sec05 .inner{
+    flex-direction: column;
+}
+.sec05 .left{
+    width: 100%;
+    height: auto;
+    margin: 0 0 10px 0;
+}
+.left h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 10px;
+}
+.tabbt li {
+    font-size: 1.1rem;
+    padding: 5px 0;
+}
+.news {
+    width: 95%;
+    margin: 10px auto;
+}
+.news p {
+    font-size: 0.9rem;
+    margin: 0px 15px 0 0;
+}
+.news span{
+    font-size: 0.8rem;
+}
+.sec05 .right{
+    width: 100%;
+    height: auto;
+}
+.right h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 20px;
+}
+.annuity .circleicon{
+    width: 90px;
+    height: 90px;
+}
+
+.annuity > div{
+    width: 31%;
+}
+.annuity{
+    justify-content: space-between;
+}
+.annuity div p {
+    font-size: 0.8rem;
+    margin: 10px 0 15px 0;
+}
+
+/*sec06*/
+.sec06 .inner{
+    flex-direction: column;
+}
+.sec06 .box {
+    width: 100%;
+    height: auto;
+    margin: 0 0 10px;
+}
+.box h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 20px 0;
+}
+.box span {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 10px;
+}
+.box p {
+    font-size: 0.9rem;
+    margin: 0px 0 15px 0;
+}
+.favicon {
+    width: 100%;
+}
+.favicon div{
+    height: 20vw;
+}
+.favicon p{
+    font-size: 1rem;
+}
+.favicon span{
+    width: 50px;
+    height: 50px;
+}
+
+/*footer*/
+footer{
+    margin: 20px 0;
+}
+footer .top {
+    height: 60px;
+    position: relative;
+}
+.top .inner{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+span.call {
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0;
+}
+.top .inner p:nth-of-type(1) {
+    font-size: 0.8rem;
+    margin: 4px 10px 0 0;
+}
+.top .inner p:nth-of-type(2) {
+    font-size: 0.8rem;
+}
+.top .inner p:nth-of-type(3) {
+    font-size: 0.8rem;
+    margin: 0 5px 0;
+}
+p > span {
+    font-size: 1.1rem;
+}
+.top .inner div {
+    width: 50px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    height: auto;
+    flex-direction: column;
+}
+.top .inner div span:first-child {
+    width: 30px;
+    height: 30px;
+}
+footer .middle{
+    height: auto;
+}
+.middle .inner{
+    flex-direction: column;
+}
+.middle .link a {
+    font-size: 0.7rem;
+}
+.middle .link a::after {
+    width: 1px;
+    height: 10px;
+    right: -8px;
+    top: 3px;
+}
+.middle .sns {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 5px 0;
+}
+.middle .sns a {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+}
+.bottom .inner{
+    flex-direction: column;
+}
+.bottom p{
+    font-size: 0.7rem;
+}
+.bottom .select{
+    flex-direction: row;
+    width: 100%;
+}
+.select select {
+    width: 100px;
+    height: 20px;
+    font-size: 0.8rem;
+}
+.bottom button {
+    width: 30px;
+    height: 20px;
+    font-size: 0.7rem;
+}
+.select div {
+    margin: 10px 0;
+}

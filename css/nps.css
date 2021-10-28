@@ -89,6 +89,9 @@ header .logo{
     font-size: 2rem;
     padding: 5px;
 }
+.mMenu, .mClose, .mLogin, .mSelect, .mSearch{
+    display: none;
+}
 /*sec01*/
 section.sec01{
     width: 100%;
@@ -132,7 +135,7 @@ nav .inner{
     position: absolute;
     top: 50px;
     left: 0;
-    height: 0px;
+    height: 0;
     z-index: 100;
     overflow: hidden;
 }
@@ -144,11 +147,28 @@ nav .inner{
     font-weight: 500;
     padding: 5px 0;
 }
-.snb ul:nth-of-type(7){
-    width: 6%;
+.snb span{
+    position: relative;
 }
+.snb span::after{
+    position: absolute;
+    top: 1px;
+    right: -20px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background: url(../images/expand_more.png) 50% 50% no-repeat;
+    background-size: contain;
+    opacity: 0.5;
+}
+.snb .snbsub{
+    width: 100%;
+    font-size: 0.8rem;
+    color: #555;
+}
+
 nav:hover > .snb{
-    height: 250px;
+    height: 450px;
     transition: height 0.7s;
 }
 nav:hover{
@@ -160,13 +180,19 @@ nav:hover ul.gnb{
 nav:hover span{
     color: #000;
 }
+.snb .underline:hover{
+    text-decoration: underline;
+}
 .gnb li:hover{
     border-bottom: 2px solid #2b2171;
 }
 .gnb li.on{
     border-bottom: 2px solid #2b2171;
 }
-.snb ul li:hover{
+.snb ul li span:hover{
+    text-decoration: underline;
+}
+.snbsub li:hover{
     text-decoration: underline;
 }
 .sec01 > .inner{
@@ -526,27 +552,9 @@ div.banner:nth-of-type(2) div{
     background-size: cover;
 }
 div.banner:nth-of-type(3) div{
-    background: #eee;
-    position: relative;
+    background: url(../images/banner.png) 50% 50% no-repeat;
+    background-size: cover;
 }
-div.banner:nth-of-type(3) div::after{
-    background: url(../images/ceo.png) 50% 50% no-repeat;
-    top: 0;
-    right: 0;
-    width: 160px;
-    height: 150px;
-    position: absolute;
-    content: "";
-}
-div.banner:nth-of-type(3) div span{
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: center;
-    display: block;
-    width: 150px;
-    padding: 40px 0 0 0;
-}
-
 div.banner:nth-of-type(4) div{
     background: url(../images/retro.png) 50% 50% no-repeat;
     background-size: cover;
