@@ -177,9 +177,6 @@ nav:hover{
 nav:hover ul.gnb{
     color: #000;
 }
-nav:hover span{
-    color: #000;
-}
 .snb .underline:hover{
     text-decoration: underline;
 }

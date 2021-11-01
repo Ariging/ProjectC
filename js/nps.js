@@ -37,6 +37,9 @@ $(document).ready(function(){
             $(this).addClass('on').siblings().removeClass('on');
             $("#"+$(this).data('id')).addClass('on').siblings().removeClass('on');
         });
+        $(".snb ul").click(function() {
+            $("li[data-id=" + $(this).attr('id')+"]").addClass('on').siblings().removeClass('on');
+        });
     }
 })
 var swiper = new Swiper(".mySwiper", {
