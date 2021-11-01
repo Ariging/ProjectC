@@ -1,0 +1,87 @@
+@charset "UTF-8";
+.is-ie .clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.is-ie .topR{
+    width: 50%;
+    margin: 0 0 0 600px;
+    padding: 10px 0 0 0;
+}
+.is-ie .search{
+    display: inline-block;
+}
+
+
+.is-ie .gnb li{
+    width: 16.4%;
+    display: inline-block;
+}
+.is-ie .sitemap .sm1{
+    width: 16.65%;
+}
+.is-ie header .inner .topL{
+    float: left;
+}
+.is-ie .snb ul{
+    float: left;
+}
+
+/*sec02*/
+.is-ie .civil h2{
+    text-align: center;
+}
+.is-ie .civilbutton{
+    width: 20%;
+    margin: 0 auto;
+}
+.is-ie .on.civilbox{
+    display: block;
+}
+.is-ie .civilbox div{
+    float: left;
+    margin: 0px 0px 0px 20px;
+}
+.is-ie .civilbox div:nth-of-type(6){
+    margin: 0 0 0 135px;
+}
+.is-ie .circleicon span{
+    margin: 30px;
+}
+
+
+
+
+.is-ie .mySwiper .swiper-button-next{
+    width: 20px;
+    height: 40px;
+    background: url(../images/nextbt.png) 50% 50% no-repeat;
+    background-size: contain;
+    top: 80px;
+}
+.is-ie .mySwiper .swiper-button-prev{
+    width: 20px;
+    height: 40px;
+    background: url(../images/prevbt.png) 50% 50% no-repeat;
+    background-size: contain;
+    top: 80px;
+}
+
+
+
+
+.is-ie .favicon span{
+    display: block;
+}
+.is-ie .circleicon span{
+    display: block;
+}
+
+
+.is-ie footer span{
+    display: inline-block;
+}
+.is-ie footer a{
+    display: inline-block;
+}

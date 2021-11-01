@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(".civilbt > button").click(function() {
+    $(".civilbutton > button").click(function() {
         $(this).addClass('on').siblings().removeClass('on');
         $("#" + $(this).data('id')).addClass('on').siblings().removeClass('on');
     });
@@ -7,6 +7,7 @@ $(document).ready(function(){
         $(this).addClass('on').siblings().removeClass('on');
         $("#" + $(this).data('id')).addClass('on').siblings().removeClass('on');
     });
+    
     $(".snb ul").hover(function() {
         $("li[data-id=" + $(this).attr('id')+"]").toggleClass('on').siblings().removeClass('on');
     });
